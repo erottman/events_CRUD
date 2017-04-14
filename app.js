@@ -18,16 +18,29 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
+hbsUtils.registerPartials(path.join(__dirname, 'views'), {
+  match: /\/?.*_.*\.(html|hbs)$/,
+  name: (name) => {
+    let pathArr = name.split('/')
+    let last = pathArr.length - 1
+    pathArr[last] = pathArr[last].slice(1)
+    let newName = pathArr.join('/')
+
+    return newName
+  }
+})
+
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
+app.use(methodOverride('_method'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/users', users);
+app.use('/events', events);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
