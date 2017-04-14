@@ -7,6 +7,7 @@ const bodyParser = require('body-parser');
 const hbs = require('hbs');
 const methodOverride = require('method-override');
 const hbsUtils = require('hbs-utils')(hbs)
+const moments = require('moments')
 
 
 const index = require('./routes/index');
