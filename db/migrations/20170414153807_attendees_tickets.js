@@ -3,10 +3,8 @@
 exports.up = function(knex) {
   return knex.schema.createTable('attendees_tickets', (table) => {
     table.increments().notNullable();
-    table.string('preferred_name').notNullable();
-    table.string('last_name').notNullable();
-    table.string('birthday').notNullable();
-    table.string('email').notNullable();
+    table.integer('ticket_id').notNullable();
+    table.integer('attendee_id').notNullable();
     table.timestamps(true,true);
   });
 };

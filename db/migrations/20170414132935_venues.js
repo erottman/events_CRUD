@@ -7,8 +7,8 @@ exports.up = function(knex) {
     table.integer('capacity').notNullable();
     table.string('line_1').notNullable();
     table.string('line_2').notNullable();
-    table.text('city').notNullable();
-    table.text('state').notNullable();
+    table.string('city').notNullable();
+    table.string('state').notNullable();
     table.integer('zip').notNullable();
     table.timestamps(true,true);
   });
