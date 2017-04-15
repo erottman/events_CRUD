@@ -5,7 +5,7 @@ exports.up = function(knex) {
     table.increments().notNullable();
     table.string('preferred_name').notNullable();
     table.string('last_name').notNullable();
-    table.string('birthday').notNullable();
+    table.date('birthday').notNullable();
     table.string('email').notNullable();
     table.timestamps(true,true);
   });
