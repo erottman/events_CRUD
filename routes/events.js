@@ -10,6 +10,7 @@ router.get('/', (req, res, next) => {
   .innerJoin('tickets', 'tickets.id', 'tickets.events_id')
   .innerJoin('attendees_tickets', 'attendees_tickets.ticket_id', 'tickets.id')
   .then(events => {
+    console.log(events);
     res.render('events/index', {events});
   })
 });
