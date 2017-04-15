@@ -12,7 +12,7 @@ exports.seed = function (knex) {
       state: 'WA',
       zip: 98101,
     }, {
-      id:1,
+      id:2,
       name: 'Showare Center' ,
       capacity: 10000,
       line_1: '45676 ',

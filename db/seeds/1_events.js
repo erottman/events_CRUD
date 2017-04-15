@@ -10,7 +10,7 @@ exports.seed = function (knex) {
       start_datetime: 2017-09-01 18:00,
       end_datetime: 2017-09-02 1:00,
     }, {
-      id:1,
+      id:2,
       venue_id:2,
       title: 'Disney on Ice' ,
       description: 'Frozen',

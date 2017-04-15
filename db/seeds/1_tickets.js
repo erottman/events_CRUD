@@ -3,22 +3,14 @@ exports.seed = function (knex) {
   .then(() => {
     return knex('tickets').insert([{
       id:1,
-      name: 'Roxbury' ,
-      capacity: 5000,
-      line_1: '1234',
-      line_2: 'Main Street',
-      city: 'Seattle',
-      state: 'WA',
-      zip: 98101,
+      events_id: 1,
+      name: 'Guns and Roses Not in This Lifetime Tour',
+      price: '$85.00',
     }, {
-      id:1,
-      name: 'Showare Center' ,
-      capacity: 10000,
-      line_1: '45676 ',
-      line_2: '68th Place',
-      city: 'Kent',
-      state: 'WA',
-      zip: 98113,
+      id:2,
+      events_id: 2,
+      name: 'Disney on Ice Presents Frozen',
+      price: '$85.00',
   }]);
   })
   .then(() => {
