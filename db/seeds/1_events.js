@@ -7,16 +7,16 @@ exports.seed = function (knex) {
       title: 'Guns and Roses' ,
       description: 'Not in This Lifetime Tour',
       over_21: true,
-      start_datetime: 2017-09-01 18:00,
-      end_datetime: 2017-09-02 1:00,
+      start_datetime: '2017-09-01 18:30 UTC',
+      end_datetime: '2017-09-02 23:00 UTC',
     }, {
       id:2,
       venue_id:2,
       title: 'Disney on Ice' ,
       description: 'Frozen',
       over_21: false,
-      start_datetime: 2017-07-01 18:00,
-      end_datetime: 2017-07-02 1:00,
+      start_datetime: '2017-07-01 17:30 UTC',
+      end_datetime: '2017-07-02  23:30 UTC',
   }]);
   })
   .then(() => {

@@ -11,7 +11,7 @@ const moments = require('moments')
 
 
 const index = require('./routes/index');
-const users = require('./routes/events');
+const events = require('./routes/events');
 
 var app = express();
 
