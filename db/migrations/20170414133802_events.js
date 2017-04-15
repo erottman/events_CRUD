@@ -6,7 +6,7 @@ exports.up = function(knex) {
     table.integer('venue_id').notNullable();
     table.string('title').notNullable();
     table.string('description').notNullable();
-    table.boolean('over_21').notNullable().default(false);
+    table.boolean('over_21').notNullable().defaultTo(false);
     table.dateTime('start_datetime').notNullable();
     table.dateTime('end_datetime').notNullable();
     table.timestamps(true,true);

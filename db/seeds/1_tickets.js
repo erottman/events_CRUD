@@ -1,8 +1,7 @@
-
 exports.seed = function (knex) {
-  return knex('venues').del()
+  return knex('tickets').del()
   .then(() => {
-    return knex('venues').insert([{
+    return knex('tickets').insert([{
       id:1,
       name: 'Roxbury' ,
       capacity: 5000,
@@ -24,7 +23,7 @@ exports.seed = function (knex) {
   })
   .then(() => {
     return knex.raw(
-      "SELECT setval('venues_id_seq', (SELECT MAX(id) FROM venues));"
+      "SELECT setval('tickets_id_seq', (SELECT MAX(id) FROM tickets));"
     );
   });
 };
