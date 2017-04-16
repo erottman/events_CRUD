@@ -1,0 +1,24 @@
+<div class="container">
+  <h1>{{ event.title}}</h1>
+  <a href="/events">Go to All Events</a>
+  <hr>
+  <div class="row">
+    <div class="col-md-2">
+      <img src=" {{ contact.poster_url }}"
+        alt = "{{ contact.poster_url }}"
+        class="poster">
+    </div>
+    <div class="col-md-6">
+      <p>Description: {{ event.description }} </p>
+      <p>Over 21 Event: {{ event.over_21 }} </p>
+      <p>Venue : {{event.name}} </p>
+      <p>Line 1 : {{ event.line_1 }} </p>
+      <p>LIne 2 : {{ event.line_2 }} </p>
+      <p>City   : {{ event.city   }} </p>
+      <p>Zip    : {{ event.zip    }} </p>
+      <p>Zip    : {{ event.zip    }} </p>
+      <p>Ticket Price  : {{ event.price   }} </p>
+      <p>Capacity  : {{ event.capcity }} </p>
+      <p>
+      </div>
+    </div>

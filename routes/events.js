@@ -16,6 +16,18 @@ router.get('/', (req, res, next) => {
 });
 
 
+router.get('/:id',(req,res,next) => {
+    let id = req.params.id
+    db.from('events')
+    .innerJoin( 'venues', 'venues.id', 'events.venue_id')
+    .innerJoin('tickets', 'tickets.id', 'tickets.events_id')
+    .innerJoin('attendees_tickets', 'attendees_tickets.ticket_id', 'tickets.id')
+    .where('events.id', id)
+    .first()
+    .then(event => {
+        res.render('events/show', {event});
+      })
+    })
 
 
 module.exports = router;
